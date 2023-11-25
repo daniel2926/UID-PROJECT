@@ -3,7 +3,30 @@ import 'package:aplikasitest1/screen/home_screen.dart';
 import 'package:aplikasitest1/utils.dart';
 import 'package:flutter/material.dart';
 
-class CartMenu  extends StatelessWidget {
+class CartMenu  extends StatefulWidget {
+
+   @override
+  _CartMenu createState() => _CartMenu();
+}
+
+  class _CartMenu extends State<CartMenu> {
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
+  void _decrementCounter() {
+    setState(() {
+      _counter--;
+      if(_counter < 0){
+        _counter = 0;
+      }
+    ;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     double baseWidth = 414;
@@ -181,17 +204,19 @@ class CartMenu  extends StatelessWidget {
                                     margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 3*fem, 0*fem),
                                     width: 22*fem,
                                     height: 22*fem,
+                                     child: FloatingActionButton( onPressed: _decrementCounter,
                                     child: Image.asset(
                                       'images/less-Suo.png',
                                       width: 22*fem,
                                       height: 22*fem,
                                     ),
                                   ),
+                                  ),
                                   Container(
                                     // D13 (236:407)
                                     margin: EdgeInsets.fromLTRB(0*fem, 1*fem, 4*fem, 0*fem),
                                     child: Text(
-                                      '1',
+                                      "${_counter}",
                                       style: SafeGoogleFont (
                                         'Mulish',
                                         fontSize: 13*ffem,
@@ -205,13 +230,15 @@ class CartMenu  extends StatelessWidget {
                                     // addX1j (236:411)
                                     width: 22*fem,
                                     height: 22*fem,
+                                     child: FloatingActionButton( onPressed: _incrementCounter,
                                     child: Image.asset(
                                       'images/add-R7P.png',
                                       width: 22*fem,
                                       height: 22*fem,
                                     ),
                                   ),
-                                ],
+                              ),
+                              ],
                               ),
                             ),
                           ],
@@ -222,11 +249,6 @@ class CartMenu  extends StatelessWidget {
                   Container(
                     // group7014GZ (236:414)
                     margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 31*fem, 27*fem),
-                    child: TextButton(
-                      onPressed: () {},
-                      style: TextButton.styleFrom (
-                        padding: EdgeInsets.zero,
-                      ),
                       child: Container(
                         padding: EdgeInsets.fromLTRB(11*fem, 13*fem, 15*fem, 12*fem),
                         height: 90*fem,
@@ -340,17 +362,19 @@ class CartMenu  extends StatelessWidget {
                                     margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 3*fem, 0*fem),
                                     width: 22*fem,
                                     height: 22*fem,
+                                     child: FloatingActionButton( onPressed: _decrementCounter,
                                     child: Image.asset(
-                                      'images/less.png',
+                                      'images/less-Suo.png',
                                       width: 22*fem,
                                       height: 22*fem,
                                     ),
+                                  ),
                                   ),
                                   Container(
                                     // Pdb (236:425)
                                     margin: EdgeInsets.fromLTRB(0*fem, 1*fem, 4*fem, 0*fem),
                                     child: Text(
-                                      '1',
+                                      "${_counter}",
                                       style: SafeGoogleFont (
                                         'Mulish',
                                         fontSize: 13*ffem,
@@ -364,11 +388,13 @@ class CartMenu  extends StatelessWidget {
                                     // addVRj (236:429)
                                     width: 22*fem,
                                     height: 22*fem,
+                                     child: FloatingActionButton( onPressed: _incrementCounter,
                                     child: Image.asset(
-                                      'images/add.png',
+                                      'images/add-R7P.png',
                                       width: 22*fem,
                                       height: 22*fem,
                                     ),
+                                  ),
                                   ),
                                 ],
                               ),
@@ -376,7 +402,7 @@ class CartMenu  extends StatelessWidget {
                           ],
                         ),
                       ),
-                    ),
+                    
                   ),
                   Container(
                     // totalrp470001ey (236:391)
