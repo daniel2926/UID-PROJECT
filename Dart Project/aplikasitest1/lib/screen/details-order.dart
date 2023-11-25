@@ -1,3 +1,4 @@
+import 'package:aplikasitest1/screen/home_screen.dart';
 import 'package:aplikasitest1/utils.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
@@ -18,6 +19,7 @@ class ReceiptCoffe extends StatelessWidget {
         decoration: BoxDecoration (
           color: Color(0xff80b525),
         ),
+        
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -26,12 +28,15 @@ class ReceiptCoffe extends StatelessWidget {
               margin: EdgeInsets.fromLTRB(2*fem, 0*fem, 0*fem, 23*fem),
               width: 36*fem,
               height: 36*fem,
+               child: GestureDetector(onTap: (){
+                 Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+                 }, 
               child: Image.asset(
                 'images/main-product-back-button-Kyj.png',
                 width: 36*fem,
                 height: 36*fem,
               ),
-            ),
+            ),),
             Container(
               // autogroup9w5fERF (DRbBkwYQPpoYFDBcGH9W5f)
               padding: EdgeInsets.fromLTRB(27*fem, 28.25*fem, 19*fem, 17*fem),

@@ -68,7 +68,7 @@ class WelcomeScreen extends StatelessWidget {
                       child: SizedBox(
                         width: 299*fem,
                         height: 24*fem,
-                        child: ElevatedButton(onPressed: (){
+                        child: TextButton(onPressed: (){
                           Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()),);
                         },
                         child: Text(
@@ -79,7 +79,8 @@ class WelcomeScreen extends StatelessWidget {
                             fontSize: 25*ffem,
                             fontWeight: FontWeight.w700,
                             height: 0.96*ffem/fem,
-                            color: Color(0xffffffff),
+                            color: 
+                            Color.fromARGB(255, 255, 255, 255),
                           ),
                         ),
                       ),

@@ -1,11 +1,9 @@
+import 'package:aplikasitest1/screen/cart_menu.dart';
+import 'package:aplikasitest1/screen/detail-coffee-2.dart';
 import 'package:aplikasitest1/screen/details-coffee-1.dart';
 import 'package:aplikasitest1/screen/details-order.dart';
 import 'package:aplikasitest1/utils.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/gestures.dart';
-import 'dart:ui';
-import 'package:google_fonts/google_fonts.dart';
-
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -384,7 +382,9 @@ class HomeScreen extends StatelessWidget {
                           ),
                           TextButton(
                             // homesmallproductcardBdj (236:368)
-                            onPressed: () {},
+                           onPressed: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => Coffee2()),);
+                              },
                             style: TextButton.styleFrom (
                               padding: EdgeInsets.zero,
                             ),
@@ -780,15 +780,19 @@ class HomeScreen extends StatelessWidget {
                               // autogroupjbjxasT (DRb49AEXFugoFTR7kJJbjX)
                               width: 32*fem,
                               height: 49*fem,
+                              child: GestureDetector(onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => CartMenu()));
+                              }, 
                               child: Stack(
                                 children: [
                                   Positioned(
                                     // cartiyf (256:109)
                                     left: 0*fem,
-                                    top: 10*fem,
+                                    top: 10*fem,   
                                     child: Container(
                                       width: 24*fem,
                                       height: 39*fem,
+
                                       child: Column(
                                         crossAxisAlignment: CrossAxisAlignment.center,
                                         children: [
@@ -837,7 +841,7 @@ class HomeScreen extends StatelessWidget {
                                             fontSize: 10*ffem,
                                             fontWeight: FontWeight.w400,
                                             height: 1.2*ffem/fem,
-                                            color: Color(0xffffffff),
+                                            color: Color.fromARGB(255, 255, 255, 255),
                                           ),
                                         ),
                                       ),
@@ -845,6 +849,7 @@ class HomeScreen extends StatelessWidget {
                                   ),
                                 ],
                               ),
+                            ),
                             ),
                           ],
                         ),

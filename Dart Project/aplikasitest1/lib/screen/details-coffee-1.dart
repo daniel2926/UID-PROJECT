@@ -1,6 +1,8 @@
+
+import 'package:aplikasitest1/screen/cart_menu.dart';
+import 'package:aplikasitest1/screen/home_screen.dart';
 import 'package:aplikasitest1/utils.dart';
 import 'package:flutter/material.dart';
-import 'dart:ui';
 
 class Coffe1 extends StatelessWidget {
   @override
@@ -65,7 +67,9 @@ class Coffe1 extends StatelessWidget {
                             // mainproductbackbuttonW3B (236:451)
                             margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 236*fem),
                             child: TextButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+                              },
                               style: TextButton.styleFrom (
                                 padding: EdgeInsets.zero,
                               ),
@@ -300,20 +304,27 @@ class Coffe1 extends StatelessWidget {
               ),
             ),
             Container(
-              // mainproductaddtocartbutton3a9 (266:75)
-              margin: EdgeInsets.fromLTRB(42*fem, 0*fem, 37*fem, 0*fem),
+               margin: EdgeInsets.fromLTRB(42*fem, 0*fem, 37*fem, 0*fem),
               padding: EdgeInsets.fromLTRB(52.5*fem, 24*fem, 25.5*fem, 25*fem),
               width: double.infinity,
               decoration: BoxDecoration (
                 color: Color(0xff80b525),
                 borderRadius: BorderRadius.circular(34*fem),
               ),
+            child: TextButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => CartMenu(),));
+            }, 
+              // mainproductaddtocartbutton3a9 (266:75)
+             
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Container(
-                    // addtocartiAV (I266:75;25:869)
+                  Container(                    
                     margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 58.5*fem, 0*fem),
+                    // child: ElevatedButton(onPressed: (){
+                    //   Navigator.push(context, MaterialPageRoute(builder: (context) => CartMenu()));
+                    // },
+                    // addtocartiAV (I266:75;25:869)
                     child: Text(
                       'Add to Cart',
                       textAlign: TextAlign.center,
@@ -326,7 +337,7 @@ class Coffe1 extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Text(
+                    Text(
                     // kohj (I266:75;25:878)
                     'Rp 20.000',
                     textAlign: TextAlign.center,
@@ -337,10 +348,11 @@ class Coffe1 extends StatelessWidget {
                       height: 1.2*ffem/fem,
                       color: Color(0xffffffff),
                     ),
-                  ),
-                ],
+                  ), 
+              ],
               ),
-            ),
+             ),
+              ),
           ],
         ),
       ),
