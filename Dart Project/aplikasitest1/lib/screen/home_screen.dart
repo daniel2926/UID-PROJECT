@@ -77,51 +77,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned(
-              // homesearch4eM (236:253)
-              left: 38.9462890625*fem,
-              top: 79*fem,
-              child: Container(
-                padding: EdgeInsets.fromLTRB(17*fem, 16*fem, 255*fem, 15*fem),
-                width: 345*fem,
-                height: 50*fem,
-                decoration: BoxDecoration (
-                  border: Border.all(color: Color(0xff627281)),
-                  color: Color(0xfff8f7fa),
-                  borderRadius: BorderRadius.circular(100*fem),
-                ),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                      // akariconssearchiD7 (236:266)
-                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 10*fem, 0*fem),
-                      width: 19*fem,
-                      height: 19*fem,
-                      child: Image.asset(
-                        'images/akar-icons-search.png',
-                        width: 19*fem,
-                        height: 19*fem,
-                      ),
-                    ),
-                    Container(
-                      // searchcoffeeR7X (236:254)
-                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 1*fem),
-                      child: Text(
-                        'Search ..',
-                        style: SafeGoogleFont (
-                          'Lato',
-                          fontSize: 12*ffem,
-                          fontWeight: FontWeight.w400,
-                          height: 1.3333333333*ffem/fem,
-                          color: Color(0xffcbcbd4),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
+            
             Positioned(
               // group6867W9 (236:268)
               left: 72*fem,

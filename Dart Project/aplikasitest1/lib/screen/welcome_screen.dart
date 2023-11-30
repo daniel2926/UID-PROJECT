@@ -1,3 +1,4 @@
+import 'package:aplikasitest1/screen/Home2_screen.dart';
 import 'package:aplikasitest1/screen/home_screen.dart';
 import 'package:aplikasitest1/utils.dart';
 import 'package:flutter/material.dart';
